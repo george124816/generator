@@ -1,0 +1,21 @@
+name: build and deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build docker image
+        run: docker build -t generator:${{ github.sha }} .
+
+      - name: Run the server
+        run: |
+          docker stack deploy -c docker-compose.yml generator
