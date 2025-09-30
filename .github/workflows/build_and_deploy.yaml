@@ -25,7 +25,6 @@ jobs:
       - name: Build and push reverse_proxy
         uses: docker/build-push-action@v6
         with:
-          context: generator/
           push: true
           tags: |
             george124816/generator:latest
