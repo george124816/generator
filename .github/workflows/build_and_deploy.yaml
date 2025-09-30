@@ -30,6 +30,9 @@ jobs:
             george124816/generator:latest
             george124816/generator:${{ github.sha }}
 
+      - name: Pull latest image
+        run: docker pull george124816/generator:latest
+
       - name: Run the server
         run: |
           docker stack deploy -c docker-compose.yml generator
