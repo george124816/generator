@@ -30,9 +30,12 @@ jobs:
             george124816/generator:latest
             george124816/generator:${{ github.sha }}
 
+      - name: Remove old images
+        run: docker image rm george124816/generator:latest
+
       - name: Pull latest image
         run: docker pull george124816/generator:latest
 
       - name: Run the server
         run: |
-          docker service update --image george124816/generator:latest generator_generator
+            docker stack deploy -c docker-compose.yml --resolve-image always -d generator

@@ -2,7 +2,14 @@ services:
   generator:
     image: george124816/generator:latest
     ports:
-      - "4000:4000"
+      - target: 4000
+        published: 4000
+        protocol: tcp
+        mode: ingress
     deploy:
-      mode: replicated
       replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 5s
+      restart_policy:
+        condition: on-failure
