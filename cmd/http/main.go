@@ -18,8 +18,7 @@ type CpfResponse struct {
 // @title Generator API
 // @version 1.0
 // @description API for generating CPF and CNPJ
-// @servers http://localhost:4000
-// @servers https://api.myserver.com
+// @servers https://generator.georgerodrigues.dev
 // @BasePath /
 func main() {
 	mux := http.NewServeMux()
