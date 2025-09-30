@@ -2,10 +2,7 @@ services:
   generator:
     image: george124816/generator:latest
     ports:
-      - target: 4000
-        published: 4000
-        protocol: tcp
-        mode: host
+      - "4000:4000"
     deploy:
       mode: replicated
       replicas: 1
