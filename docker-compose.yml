@@ -6,3 +6,4 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+    pull_policy: always
