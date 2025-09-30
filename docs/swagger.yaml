@@ -1,5 +1,5 @@
 basePath: /
-host: localhost:4000
+host: generator.georgerodrigues.dev
 info:
   contact: {}
   description: API for generating CPF and CNPJ
