@@ -35,4 +35,4 @@ jobs:
 
       - name: Run the server
         run: |
-          docker stack deploy -c docker-compose.yml generator
+          docker service update --image george124816/generator:latest generator_generator
