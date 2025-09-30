@@ -30,9 +30,6 @@ jobs:
             george124816/generator:latest
             george124816/generator:${{ github.sha }}
 
-      - name: Remove old images
-        run: docker image rm george124816/generator:latest
-
       - name: Pull latest image
         run: docker pull george124816/generator:latest
 
