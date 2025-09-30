@@ -1,0 +1,18 @@
+basePath: /
+host: localhost:4000
+info:
+  contact: {}
+  description: API for generating CPF and CNPJ
+  title: Generator API
+  version: "1.0"
+paths:
+  /cpf:
+    get:
+      description: Endpoint that returns a new cpf
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Generate a cpf
+swagger: "2.0"
