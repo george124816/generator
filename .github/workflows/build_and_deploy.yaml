@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build docker image
-        run: docker build -t generator:${{ github.sha }} .
+        run: |
+          docker build -t generator:latest -t generator:${{ github.sha }} .
 
       - name: Run the server
         run: |
