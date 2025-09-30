@@ -1,6 +1,6 @@
 services:
   generator:
-    image: generator:latest
+    image: george124816/generator:latest
     ports:
       - "4000:4000"
     deploy:

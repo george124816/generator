@@ -29,3 +29,7 @@ jobs:
           tags: |
             george124816/generator:latest
             george124816/generator:${{ github.sha }}
+
+      - name: Run the server
+        run: |
+          docker stack deploy -c docker-compose.yml generator
