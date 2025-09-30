@@ -8,4 +8,4 @@ services:
         mode: host
     deploy:
       mode: replicated
-      replicas: 3
+      replicas: 1
