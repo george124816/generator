@@ -1,0 +1,6 @@
+[tools]
+golang = '1.25.0'
+
+[tasks]
+test = "go test ./..."
+build = "go build -o generator_http ./cmd/http/ && go build -o generator_cli ./cmd/generator/"
