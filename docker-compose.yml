@@ -5,9 +5,9 @@ services:
       - target: 4000
         published: 4000
         protocol: tcp
-        mode: host
+        mode: ingress
     deploy:
-      replicas: 1
+      replicas: 3
       update_config:
         parallelism: 1
         delay: 5s
