@@ -8,9 +8,10 @@ import (
 func GenerateCpf() string {
 	var validCpf string
 	for {
+		// TODO: refactor to generate first 9 digits and generate the another two
 		generatedCpf := fmt.Sprintf("%011d", rand.Int63n(100000000000))
 
-		if isValidCpf(generatedCpf) {
+		if IsValidCpf(generatedCpf) {
 			validCpf = generatedCpf
 			break
 		}
@@ -19,7 +20,7 @@ func GenerateCpf() string {
 	return validCpf
 }
 
-func isValidCpf(document string) bool {
+func IsValidCpf(document string) bool {
 	if len(document) != 11 {
 		return false
 	}
@@ -58,6 +59,7 @@ func isValidCpf(document string) bool {
 	}
 
 	finalCpf = fmt.Sprintf("%s%d", finalCpf, secondDigit)
+
 	if document == finalCpf {
 		return true
 	}
