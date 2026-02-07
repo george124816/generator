@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	utils "github.com/george124816/generator/internal"
 	"github.com/george124816/generator/internal/documents"
 )
 
@@ -12,6 +13,7 @@ func main() {
 		fmt.Println(`should be an argument:
 		- cpf
 		- cnpj
+		- uuid
 		`)
 	} else {
 		switch os.Args[1] {
@@ -19,6 +21,8 @@ func main() {
 			fmt.Println(documents.GenerateCpf())
 		case "cnpj":
 			fmt.Println(documents.GeneraterCnpj())
+		case "uuid":
+			fmt.Println(utils.GenerateUuid())
 		}
 	}
 
