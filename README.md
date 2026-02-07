@@ -1,13 +1,9 @@
 ## Generator
 
-Cli/API that generate documents
+Cli/API that generate documents and utils
 
 ## Instalation
 
 ```sh
-go install github.com/george124816/generator/cmd/generator@main
+go install github.com/george124816/generator/cmd/generator@latest
 ```
-
-## Documentation
-
-[Swagger](https://generator.georgerodrigues.dev/swagger)
